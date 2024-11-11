@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "nombre": "Croquetas NutriPet",
+      "descripcion": "Alimento balanceado para perros adultos, rico en proteínas.",
+      "foto": "assets/images/croquetas-nutripet.jpeg",
+      "precio": 35.99,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 2,
+      "nombre": "Alimento Hipoalergénico",
+      "descripcion": "Ideal para perros con sensibilidad digestiva y alergias alimentarias.",
+      "foto": "assets/images/alimento-hipoalergenico.jpeg",
+      "precio": 45.50,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 3,
+      "nombre": "Croquetas para Cachorros",
+      "descripcion": "Desarrolladas para el crecimiento y desarrollo de cachorros.",
+      "foto": "assets/images/croquetas-cachorros.jpeg",
+      "precio": 30.00,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 4,
+      "nombre": "Alimento para Gatos",
+      "descripcion": "Alimento seco para gatos adultos, rico en nutrientes esenciales.",
+      "foto": "assets/images/alimento-gatos.jpeg",
+      "precio": 38.75,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 5,
+      "nombre": "Comida en Lata para Perros",
+      "descripcion": "Comida húmeda para perros, fácil de digerir y sabrosa.",
+      "foto": "assets/images/comida-lata-perros.jpeg",
+      "precio": 25.00,
+      "categoria": "Alimentos"
+    },
+    {
+      "id": 6,
+      "nombre": "Juguete Interactivo para Perro",
+      "descripcion": "Juguete de goma resistente con función de dispensador de golosinas.",
+      "foto": "assets/images/juguete-perro.jpeg",
+      "precio": 15.99,
+      "categoria": "Juguetes"
+    },
+    {
+      "id": 7,
+      "nombre": "Pelota de Goma para Perro",
+      "descripcion": "Pelota duradera, ideal para juegos al aire libre.",
+      "foto": "assets/images/pelota-goma.jpeg",
+      "precio": 9.99,
+      "categoria": "Juguetes"
+    },
+    {
+      "id": 8,
+      "nombre": "Varita para Gatos con Plumas",
+      "descripcion": "Varita interactiva con plumas, ideal para estimular a tu gato.",
+      "foto": "assets/images/varita-plumas.jpeg",
+      "precio": 12.50,
+      "categoria": "Juguetes"
+    },
+    {
+      "id": 9,
+      "nombre": "Hueso de Goma para Perro",
+      "descripcion": "Hueso de goma resistente, ideal para perros que mastican mucho.",
+      "foto": "assets/images/hueso-goma.jpeg",
+      "precio": 8.99,
+      "categoria": "Juguetes"
+    },
+    {
+      "id": 10,
+      "nombre": "Ratoncito de Peluche para Gatos",
+      "descripcion": "Juguete suave con sonido para atraer a tu gato.",
+      "foto": "assets/images/raton-peluche.jpeg",
+      "precio": 7.99,
+      "categoria": "Juguetes"
+    },
+    {
+      "id": 11,
+      "nombre": "Sudadera para Perro",
+      "descripcion": "Sudadera cómoda y abrigada para perros pequeños.",
+      "foto": "assets/images/sudadera-perro.jpeg",
+      "precio": 20.00,
+      "categoria": "Ropa"
+    },
+    {
+      "id": 12,
+      "nombre": "Abrigo de Invierno para Gato",
+      "descripcion": "Abrigo cálido para mantener a tu gato cómodo en invierno.",
+      "foto": "assets/images/abrigo-invierno-gato.jpeg",
+      "precio": 18.99,
+      "categoria": "Ropa"
+    },
+    {
+      "id": 13,
+      "nombre": "Camisa para Perro",
+      "descripcion": "Camisa ligera y fresca para perros de tamaño mediano.",
+      "foto": "assets/images/camisa-perro.jpeg",
+      "precio": 15.50,
+      "categoria": "Ropa"
+    },
+    {
+      "id": 14,
+      "nombre": "Capa para Perro",
+      "descripcion": "Capa impermeable para proteger a tu perro en días lluviosos.",
+      "foto": "assets/images/capa-perro.jpeg",
+      "precio": 22.00,
+      "categoria": "Ropa"
+    },
+    {
+      "id": 15,
+      "nombre": "Saco de Dormir para Gatos",
+      "descripcion": "Saco suave y acolchado para el descanso de tu gato.",
+      "foto": "assets/images/saco-dormir-gato.jpeg",
+      "precio": 19.75,
+      "categoria": "Ropa"
+    }
+  ]
+  

@@ -1,0 +1,21 @@
+<!-- Contenedor de productos -->
+<div class="products-container">
+  <div class="categories">
+    <h3>Categorías</h3>
+    <ul>
+      <li *ngFor="let category of categories" (click)="filterProducts(category)">
+        {{ category }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="products">
+    <h3>Productos</h3>
+    <div class="card-container">
+      <app-card *ngFor="let product of filteredProducts" [product]="product">
+      </app-card>
+    </div>
+  </div>
+</div>
+
+

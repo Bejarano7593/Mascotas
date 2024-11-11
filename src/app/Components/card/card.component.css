@@ -1,0 +1,381 @@
+.product-card {
+  width: 18rem;
+  margin: 15px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.product-card strong {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px);
+  transition: transform 0.3s ease;
+}
+
+.modal.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff3b3b;
+}
+
+.product-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-detail .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.product-detail .product-image img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.product-info h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.product-info strong {
+  font-size: 1.3rem;
+  color: #007bff;
+}
+
+.payment-options {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.payment-options li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.payment-options input {
+  margin-right: 10px;
+}
+
+.payment-options label {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.payment-methods button {
+  width: 30%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-methods button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.modal-content, .payment-methods button {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: #218838;
+  transform: translateY(-5px);
+}
+
+.floating-btn:focus {
+  outline: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  display: none;
+}
+
+.modal.open + .modal-overlay {
+  display: block;
+}
+
+.product-info .description {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-info .availability {
+  font-size: 1.2rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.payment-methods button.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.payment-methods button.active:hover {
+  background-color: #218838;
+}
+
+.modal-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-cart.open {
+  opacity: 1;
+}
+
+.modal-cart .modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px);
+  transition: transform 0.3s ease;
+}
+
+.modal-cart .modal-content.open {
+  transform: translateY(0);
+}
+
+.modal-cart .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-cart .close:hover {
+  color: #ff3b3b;
+}
+
+.modal-cart table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.modal-cart table th,
+.modal-cart table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-cart table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.modal-cart .quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-cart .quantity-control button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-cart .quantity-control button:hover {
+  background-color: #0056b3;
+}
+
+.modal-cart .quantity-control input {
+  width: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.modal-cart .total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+  color: #28a745;
+}

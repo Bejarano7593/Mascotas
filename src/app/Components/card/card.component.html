@@ -1,0 +1,83 @@
+<!-- Card Product -->
+<div class="product-card">
+    <img [src]="product.foto" alt="{{product.nombre}}" class="product-image" />
+    <h3>{{ product.nombre }}</h3>
+    <p>{{ product.descripcion }}</p>
+    <p><strong>Bs. {{ product.precio }}</strong></p>
+    <button class="btn btn-primary" (click)="openProductDetailModal()">Ver Detalles</button>
+</div>
+
+<!-- Modal Detalle del Producto -->
+<div *ngIf="showProductDetailModal" class="modal open">
+    <div class="modal-content">
+        <span class="close" (click)="closeProductDetailModal()">&times;</span>
+        <h5>Detalle del Producto</h5>
+        <div class="product-detail">
+            <div class="product-image">
+                <img [src]="product.foto" alt="Product Image" class="img-fluid">
+            </div>
+            <div class="product-info">
+                <h5>{{ product.nombre }}</h5>
+                <p>{{ product.descripcion }}</p>
+                <p><strong>Precio: </strong>Bs. {{ product.precio }}</p>
+                <label for="quantity">Cantidad:</label>
+                <input type="number" [(ngModel)]="product.cantidad" min="1" id="quantity">
+                <button class="btn btn-primary" (click)="addToCart()">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Carrito -->
+<div *ngIf="showCartModal" class="modal open">
+    <div class="modal-content">
+        <span class="close" (click)="closeCartModal()">&times;</span>
+        <h5>Carrito de Compras</h5>
+        <!-- Mostrar los productos del carrito en una tabla -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cart">
+                    <td>{{ item.nombre }}</td>
+                    <td>
+                        <button (click)="updateQuantity(item, 'decrease')" [disabled]="item.cantidad <= 1">-</button>
+                        {{ item.cantidad }}
+                        <button (click)="updateQuantity(item, 'increase')">+</button>
+                    </td>
+                    <td>Bs. {{ item.precio | number: '1.2-2' }}</td> <!-- Limitar a 2 decimales -->
+                    <td>Bs. {{ (item.precio * item.cantidad) | number: '1.2-2' }}</td> <!-- Limitar a 2 decimales -->
+                    <td><button (click)="removeFromCart(item)" class="btn btn-danger">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <strong>Total: Bs. {{ getTotal() | number: '1.2-2' }}</strong> <!-- Limitar a 2 decimales -->
+        </div>
+        <button class="btn btn-primary" (click)="openPaymentMethodModal()">Seleccionar Método de Pago</button>
+    </div>
+</div>
+
+
+<!-- Modal Selección de Método de Pago -->
+<div *ngIf="showPaymentMethodModal" class="modal open">
+    <div class="modal-content">
+        <span class="close" (click)="closePaymentMethodModal()">&times;</span>
+        <h5>Seleccione su Método de Pago</h5>
+        <ul class="payment-options">
+            <li *ngFor="let method of paymentMethods">
+                <input type="radio" id="{{method}}" name="paymentMethod" (click)="selectPaymentMethod(method)">
+                <label for="{{method}}">{{ method }}</label>
+            </li>
+        </ul>
+        <button class="btn btn-primary" [disabled]="!selectedPaymentMethod" (click)="confirmPaymentMethod()">Confirmar
+            Pago</button>
+    </div>
+</div>
